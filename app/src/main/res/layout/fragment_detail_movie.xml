@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detailmovie.DetailMovieFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/radius"
+        tools:src="@tools:sample/avatars" />
+
+    <com.dailyapps.dicodingmoviedbketpackpro.utils.components.AmTextView
+        android:id="@+id/labelRealaseDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/component_big"
+        android:paddingRight="@dimen/component_big"
+        android:textSize="@dimen/text_normal"
+        app:am_font_style="medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="Release 2020-09-09" />
+
+    <com.dailyapps.dicodingmoviedbketpackpro.utils.components.AmTextView
+        android:id="@+id/labelTitleDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingLeft="@dimen/component_big"
+        android:paddingRight="@dimen/component_big"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_extra"
+        android:textStyle="bold"
+        app:am_font_style="medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRealaseDes"
+        tools:text="Trailer True Beauty" />
+
+    <com.dailyapps.dicodingmoviedbketpackpro.utils.components.AmTextView
+        android:id="@+id/labelVoteDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/component_big"
+        android:paddingRight="@dimen/component_big"
+        android:textSize="@dimen/text_normal"
+        app:am_font_style="medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitleDes"
+        tools:text="Vote: 65" />
+
+    <com.dailyapps.dicodingmoviedbketpackpro.utils.components.AmTextView
+        android:id="@+id/labelOverviewDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/component_big"
+        android:paddingRight="@dimen/component_big"
+        android:textSize="@dimen/text_normal"
+        app:am_font_style="medium"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelVoteDes"
+        tools:text="Overview"
+        android:gravity="center_horizontal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

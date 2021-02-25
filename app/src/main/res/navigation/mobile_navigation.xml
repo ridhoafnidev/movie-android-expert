@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_movie">
+
+    <fragment
+        android:id="@+id/navigation_movie"
+        android:name="com.dailyapps.dicodingmoviedbketpackpro.ui.movie.MovieFragment"
+        android:label="@string/title_movie"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_navigation_movie_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tv_show"
+        android:name="com.dailyapps.dicodingmoviedbketpackpro.ui.tvshow.TvShowFragment"
+        android:label="@string/title_tv_show"
+        tools:layout="@layout/fragment_tv_show" >
+        <action
+            android:id="@+id/action_navigation_tv_show_to_detailTvShowFragment"
+            app:destination="@id/detailTvShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.dailyapps.dicodingmoviedbketpackpro.ui.detailmovie.DetailMovieFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail_movie" >
+        <argument
+            android:name="data"
+            app:argType="com.dailyapps.dicodingmoviedbketpackpro.data.Movie" />
+        <action
+            android:id="@+id/action_detailFragment_to_navigation_movie"
+            app:destination="@id/navigation_movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTvShowFragment"
+        android:name="com.dailyapps.dicodingmoviedbketpackpro.ui.detailtvshow.DetailTvShowFragment"
+        android:label="detail_tv_show_fragment"
+        tools:layout="@layout/detail_tv_show_fragment" >
+        <argument
+            android:name="data"
+            app:argType="com.dailyapps.dicodingmoviedbketpackpro.data.Tv" />
+        <action
+            android:id="@+id/action_detailTvShowFragment_to_navigation_tv_show"
+            app:destination="@id/navigation_tv_show" />
+    </fragment>
+
+</navigation>
