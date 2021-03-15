@@ -12,10 +12,10 @@ jobs:
           key: android-orb-v1-
       - run:
           name: Chmod permissions
-          command: chmod +x ./gradle
+          command: chmod +x ./gradlew
       - run:
           name: Download Dependencies
-          command: ./gradle androidDependencies
+          command: ./gradlew androidDependencies
       - save_cache:
           key: 'android-orb-v1-{{ epoch }}'
           paths:
@@ -23,7 +23,7 @@ jobs:
             - ~/.android/cache
       - run:
           name: Run Build
-          command: ./gradle build
+          command: ./gradlew build
       - store_artifacts: 
           path: app/build/reports
           destination: reports
